@@ -60,6 +60,19 @@
             transition: opacity 0.5s ease, transform 0.5s ease;
         }
 
+        .visible .content p {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        #progressBar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 5px;
+            background: linear-gradient(to right, #ff6b6b, #4ecdc4);
+            z-index: 9999;
+        }
     </style>
 </head>
 
@@ -98,7 +111,62 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
+    <script>
+        gsap.registerPlugin(ScrollTrigger);
 
+        function updateProgressBar() {
+            const windowHeight = window.innerHeight;
+            const documentHeight = document.documentElement.scrollHeight - windowHeight;
+            const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            const scrollPercentage = (scrollTop / documentHeight) * 100;
+            document.getElementById('progressBar').style.width = scrollPercentage + '%';
+        }
+
+        window.addEventListener('scroll', updateProgressBar);
+
+        gsap.utils.toArray('.parallax').forEach((section, index) => {
+            gsap.to(section, {
+                backgroundPosition: `50% ${-50 * (index + 1)}%`,
+                ease: "none",
+                scrollTrigger: {
+                    trigger: section,
+                    start: "top bottom",
+                    end: "bottom top",
+                    scrub: true
+                }
+            });
+
+            gsap.to(section, {
+                backgroundColor: () => `hsl(${index * 120}, 50%, 50%)`,
+                scrollTrigger: {
+                    trigger: section,
+                    start: "top center",
+                    end: "bottom center",
+                    scrub: true
+                }
+            });
+        });
+
+        gsap.utils.toArray('.content').forEach((content, index) => {
+            gsap.to(content, {
+                backgroundColor: () => `hsl(${index * 120 + 60}, 30%, 90%)`,
+                scrollTrigger: {
+                    trigger: content,
+                    start: "top bottom",
+                    end: "bottom top",
+                    scrub: true
+                }
+            });
+        });
+
+        ScrollTrigger.batch("h1, .content p", {
+            onEnter: batch => gsap.to(batch, { opacity: 1, y: 0, stagger: 0.15, overwrite: true }),
+            onLeave: batch => gsap.set(batch, { opacity: 0, y: -50, overwrite: true }),
+            onEnterBack: batch => gsap.to(batch, { opacity: 1, y: 0, stagger: 0.15, overwrite: true }),
+            onLeaveBack: batch => gsap.set(batch, { opacity: 0, y: 50, overwrite: true })
+        });
+
+    </script>
 </body>
 
 </html>
