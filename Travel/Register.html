@@ -91,11 +91,112 @@
                         <input type="radio" id="male" name="gender" value="male">
                          <label class="gender-label" for="male">Male</label>
                      </div>
-                    </div>
+                     <div class="col-md-3" style="text-align: center;">
+                        <input type="radio" id="female" name="gender" value="female">
+                         <label class="gender-label" for="female">Female</label>
+                     
+                     </div>
+                     <div class="col-md-3" style="text-align: center;">
+                        <input type="radio" id="other" name="gender" value="other">
+                         <label class="gender-label" for="other">Other</label>
+                     </div>
+                     </div>
+                    <input type="submit" value="Register">
                 </form>
-
+                <span> Already Have An Account? <a href="Login.html" class="text-dark"><u>Login Here</u></a>.</span>
             </div>
+            <div class="col-md-2"></div>
         </div>
+        <div class="row" style="height: 20px;"></div>
     </div>
+
+
+<style>
+     input[type="text"],
+    input[type="password"],
+    input[type="email"],
+    input[type="tel"],
+    input[type="date"],
+    input[type="radio"],
+    input[type="submit"] {
+        width: 100%;
+        padding: 10px;
+        margin: 5px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+    input[type="submit"] {
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        cursor: pointer;
+    }
+    input[type="submit"]:hover {
+        background-color: #45a049;
+    }
+    .error {
+        color: red;
+    }
+</style>
+
+<script>
+    document.getElementById('registerForm').addEventListener('submit', function(event) {
+        event.preventDefault(); 
+        var fullName = document.getElementById('fullName').value.trim();
+        var contact = document.getElementById('contact').value.trim();
+        var dob = document.getElementById('dob').value.trim();
+        var email = document.getElementById('email').value.trim();
+        var password = document.getElementById('password').value.trim();
+        var gender = document.querySelector('input[name="gender"]:checked');
+        var errorMessages = document.querySelectorAll('.error');
+        errorMessages.forEach(function(element) {
+            element.textContent = '';
+        });
+
+        if (!fullName) {
+            document.getElementById('fullName').nextSibling.textContent = 'Full Name is required';
+            return;
+        }
+        if (!contact) {
+            document.getElementById('contact').nextSibling.textContent = 'Contact Number is required';
+            return;
+        }
+
+        if (!dob) {
+            document.getElementById('dob').nextSibling.textContent = 'Date of Birth is required';
+            return;
+        }
+
+
+        if (!email) {
+            document.getElementById('email').nextSibling.textContent = 'Email is required';
+            return;
+        }
+        if (!password) {
+            document.getElementById('password').nextSibling.textContent = 'Password is required';
+            return;
+        }
+
+        if (!gender) {
+            document.getElementById('gender').nextSibling.textContent = 'Gender is required';
+            return;
+        }
+        if (window.confirm('Registered successfully! Click OK to continue.')) {
+            // Redirect to index.html after user clicks OK
+            window.location.href = 'index.html';
+            
+            // Log registration details
+            console.log('Full Name:', fullName);
+            console.log('Contact Number:', contact);
+            console.log('Date of Birth:', dob);
+            console.log('Email:', email);
+            console.log('Password:', password);
+            console.log('Gender:', gender.value);
+        }
+    });
+</script>
+
 </body>
 </html>
