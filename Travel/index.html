@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Index</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <script src="Script.js" type="Script"></script>
+  <link rel="Script" type="text/Script" href="Script.js">
+  <link rel="stylesheet" type="text/css" href="Style.css">
+
+</head>
+
+<body class="img-fluid">
+  <!-- nav -->
+  <nav class="navbar navbar-expand-lg">
+    <a class="navbar-brand" href="index.html"><img src="travel-tour-logo.png" alt="Bordeaux" height="18px" /></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+      aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <i class="fas fa-bars"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav">
+        <li class="nav-item active">
+          <a class="nav-link" href="index.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Book</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Services</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+            Packages
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <a class="dropdown-item" href="#">United States</a>
+            <a class="dropdown-item" href="#">India</a>
+            <a class="dropdown-item" href="#">France</a>
+            <a class="dropdown-item" href="#">Germany</a>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">About Us</a>
+        </li>
+      </ul>
+    </div>
+    <div class="form-inline">
+      <a class="btn btn-outline-success my-2 my-sm-0 NavBtn" type="submit" href="Login.html">Sign in</a>
+      <div style="margin-left: 10px;"></div>
+      <a class="btn btn-outline-success my-2 my-sm-0 NavBtn" type="submit" href="Register.html">Register</a>
+    </div>
+  </nav>
+  <!--  -->
+  <div class="container-fluid">
+    <div class="row">
+      <h1 class="col-md-12 Heading" id="rolling-text">Welcome to Travel Tour</h1><br /><br />
+      <div class="col-md-12 subHeading">
+        Book for
+        <span id="word"></span>
+      </div>
+    </div>
+    <div class="row V-Gap"></div>
+    <div class="container">
+      <div class="row mainrow Border-Shadow">
+        <div class="col-md-6">
+          <img src="daniela-cuevas-t7YycgAoVSw-unsplash.jpg" class="Img" alt="IMG" />
+        </div>
+        <div class="col-md-6">
+          <form action="">
+            <div class="mb-3">
+              <input type="text" class="form-control" id="whereTo" name="whereTo" list="bookingPlaces"
+                placeholder="Where To" required="" fdprocessedid="b9ow1w">
+              <datalist id="bookingPlaces">
+                <option value="India">India</option>
+                <option value="USA">USA</option>
+                <option value="Russia">Russia</option>
+                <option value="Bangkok">Bangkok</option>
+                <option value="Thailand">Thailand</option>
+                <option value="London">London</option>
+              </datalist>
+            </div>
+            <div class="mb-3">
+              <input type="number" class="form-control" id="howMany" name="howMany" placeholder="How Many" min="1"
+                required="" fdprocessedid="21pog">
+            </div>
+            <div class="mb-3">
+              <input type="date" class="form-control" id="fromDate" name="fromDate" placeholder="Start Date" required=""
+                min="2024-02-26">
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
