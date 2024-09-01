@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Parallax Scrolling</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            color: #333;
+            overflow-x: hidden;
+        }
+
+        .header {
+            background: linear-gradient(to right, #1e3c72, #2a5298);
+            color: #fff;
+            text-align: center;
+            padding: 100px 20px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .header nav {
+            position: absolute;
+            top: 20px;
+            left: 0;
+            width: 100%;
+        }
+
+        .header nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        .header nav ul li {
+            margin: 0 15px;
+        }
+
+        .header nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <nav>
+            <ul>
+                <li><a href="#section1">Home</a></li>
+                <li><a href="#section2">Features</a></li>
+                <li><a href="#section3">Gallery</a></li>
+                <li><a href="#section4">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="header-content">
+            <h1>Experience Parallax Magic</h1>
+            <p>Scroll down to unveil the beauty of modern web design</p>
+        </div>
+    </header>
+
+    <section id="section1" class="parallax parallax1">
+        <div class="overlay"></div>
+        <div class="section-content">
+            <h2>Welcome to Our Site</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet.</p>
+        </div>
+    </section>
+
+    <section id="section2" class="features">
+        <div class="feature">
+            <h2>Innovative Features</h2>
+            <p>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Integer nec odio.
+            </p>
+        </div>
+    </section>
+
+    <section id="section3" class="parallax parallax2">
+        <div class="overlay"></div>
+        <div class="section-content">
+            <h2>Gallery</h2>
+            <p>Explore our gallery and witness the marvels we have created.</p>
+        </div>
+    </section>
+
+    <section id="section4" class="contact">
+        <h2>Contact Us</h2>
+        <p>Get in touch with us to learn more about our services and offerings.</p>
+    </section>
+
+    <footer class="footer">
+        <p>&copy; 2024 Advanced Parallax Website. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>
