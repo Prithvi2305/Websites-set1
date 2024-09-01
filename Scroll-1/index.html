@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Parallax Scrolling Website</title>
+    <style>
+        body,
+        html {
+            height: 100%;
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            overflow-x: hidden;
+        }
+
+        .parallax {
+            position: relative;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            transition: background-color 0.5s ease;
+        }
+
+        .content {
+            padding: 50px;
+            background-color: #f4f4f4;
+            transition: background-color 0.5s ease;
+        }
+
+        h1 {
+            font-size: 3em;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            opacity: 0;
+            transform: translateY(50px);
+            transition: opacity 0.5s ease, transform 0.5s ease;
+        }
+
+        .visible h1 {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .content h2 {
+            color: #333;
+            transition: color 0.5s ease;
+        }
+
+        .content p {
+            line-height: 1.6;
+            opacity: 0;
+            transform: translateX(-50px);
+            transition: opacity 0.5s ease, transform 0.5s ease;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div id="progressBar"></div>
+
+    <section id="section1" class="parallax">
+        <h1>Welcome to Dynamic Parallax</h1>
+    </section>
+
+    <div class="content">
+        <h2>Discover the Magic</h2>
+        <p>Scroll down and watch as colors shift and elements come to life. This dynamic parallax effect combines smooth
+            scrolling with eye-catching animations.</p>
+    </div>
+
+    <section id="section2" class="parallax">
+        <h1>Keep Exploring</h1>
+    </section>
+
+    <div class="content">
+        <h2>Unleash Creativity</h2>
+        <p>As you scroll, notice how the background colors transition smoothly. Each section reveals itself with subtle
+            yet engaging animations.</p>
+    </div>
+
+    <section id="section3" class="parallax">
+        <h1>Experience Innovation</h1>
+    </section>
+
+    <div class="content">
+        <h2>Bring Ideas to Life</h2>
+        <p>This final section demonstrates the seamless blend of parallax scrolling, color transitions, and element
+            animations. The possibilities are endless!</p>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
+
+</body>
+
+</html>
