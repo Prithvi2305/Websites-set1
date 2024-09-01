@@ -488,7 +488,106 @@
           <span class="sr-only">Next</span>
         </a>
       </div>
+      <div class="row" style="height: 30px;"></div>
+      <div class="row">
+        <h1 class="col text-center text-white">
+          About Us
+        </h1>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <img src="https://knowledge.wharton.upenn.edu/wp-content/uploads/2023/10/10.4.23-reibstein-best-countries-2023-GettyImages-935404280.jpg" alt="world image" class="col-md-10"/>
+        </div>
+        <div class="col-md-6 mt-5 text-white">
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis optio, itaque esse fuga praesentium adipisci illo velit eius ipsam facere dolores inventore dolor doloremque mollitia quidem. Eum, sequi. Ipsum, deleniti.</p>
+          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptate, et eum amet obcaecati assumenda qui voluptatum laboriosam! Hic laboriosam accusantium provident eum eos! Eius maiores illo repellendus adipisci, nemo eaque.</p>
+        </div>
+      </div>
     </div>
-  </div>
+
+
+
+    <!-- Footer -->
+    <footer class="footer mt-4">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4">
+            <h3>Contact Us</h3>
+            <p><i class="fas fa-envelope"></i> Email: info@travelwebsite.com</p>
+            <p><i class="fas fa-phone"></i> Phone: +91 8866749395</p>
+          </div>
+          <div class="col-md-4">
+            <h3>Follow Us</h3>
+            <p>Connect with us on social media:</p>
+            <ul class="list-unstyled">
+              <li><a href="#"><i class="fab fa-facebook"></i> Facebook</a></li>
+              <li><a href="#"><i class="fab fa-twitter"></i> Twitter</a></li>
+              <li><a href="#"><i class="fab fa-instagram"></i> Instagram</a></li>
+            </ul>
+          </div>
+          <div class="col-md-4">
+            <h3>Subscribe to our TravelTour</h3>
+            <form>
+              <div class="form-group">
+                <input type="email" class="form-control" placeholder="Enter your email">
+              </div>
+              <button type="submit" class="btn btn-primary">Subscribe</button>
+            </form>
+          </div>
+        </div>
+        <hr>
+        <p class="text-center">© 2024 TravelTour. All rights reserved.</p>
+      </div>
+    </footer>
+
 </body>
+
 </html>
+
+
+<script>
+  var words = ['India', 'Japan', 'France', 'Germany', 'Canada', 'Australia', 'Brazil', 'Russia', 'And', 'South Africa'];
+  var index = 0;
+  function changeWord(wordElement) {
+    wordElement.textContent = words[index];
+    index = (index + 1) % words.length;
+  }
+
+  var wordElement = document.getElementById('word');
+  setInterval(function () {
+    changeWord(wordElement);
+  }, 1000);
+  document.addEventListener("DOMContentLoaded", function () {
+    var introText = document.getElementById('intro-text');
+    introText.classList.add('intro');
+  });
+
+  function toggleEndDate() {
+    var startDateInput = document.getElementById('fromDate');
+    var endDateInput = document.getElementById('toDate');
+    if (startDateInput.value !== '') {
+      endDateInput.disabled = false;
+      endDateInput.min = startDateInput.value;
+    } else {
+      endDateInput.disabled = true;
+      endDateInput.value = '';
+    }
+  }
+  document.getElementById('fromDate').addEventListener('change', toggleEndDate);
+
+  function checkForm() {
+    var whereTo = document.getElementById('whereTo').value;
+    var howMany = document.getElementById('howMany').value;
+    var fromDate = document.getElementById('fromDate').value;
+    var toDate = document.getElementById('toDate').value;
+    var details = document.getElementById('exampleFormControlTextarea1').value;
+
+    if (whereTo !== '' && howMany !== '' && fromDate !== '' && toDate !== '' && details !== '') {
+      // All required fields are filled, so show an alert message
+      alert('Booking Successful');
+    }
+  }
+
+  // Adding an event listener to the "Book Now" button
+  document.querySelector('.bubble-btn').addEventListener('click', checkForm);
+</script>
