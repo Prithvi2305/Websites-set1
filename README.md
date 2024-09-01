@@ -1,7 +1,3 @@
----
-title: "Website Links"
-output: html_document
----
 
 ## Website Links
 
