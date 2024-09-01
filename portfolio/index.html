@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Sydex</title>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500&family=Salsa&display=swap&family=Quicksand&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+    <header class="app-header" id="toolbar">
+        <div class="app-header__logo">
+            <img class="heaer-logo__image" src="images/logo.png" />
+        </div>
+
+        <div class="app-header__spacer"></div>
+
+        <nav class="app-header__nav-button" id="menuIcon">
+            <div class="nav-button__line"></div>
+            <div class="nav-button__line"></div>
+            <div class="nav-button__line"></div>
+        </nav>
+
+        <nav class="app-header__nav close" id="menuLinks">
+            <a class="nav__link active" href="#overview">OVERVIEW</a>
+            <a class="nav__link" href="#services">SERVICES</a>
+            <a class="nav__link" href="#works">WORKS</a>
+            <a class="nav__link" href="#about">ABOUT</a>
+            <a class="nav__link button-accent" href="#contact">HIRE ME</a>
+        </nav>
+    </header>
+
+    <main class="main-content">
+        <section class="content-jumbotron" id="overview">
+            <div class="jumbotron__overlay">
+                <h1 class="heading jumbotron__title">Professional websites</h1>
+                <h2 class="jumbotron__subtitle">FOR PROFESSIONAL BUSINESSES</h2>
+
+                <a class="button-accent xl" href="#contact">HIRE ME</a>
+            </div>
+        </section>
+
+        <section class="app-section" id="services">
+            <h1 class="heading">Our services</h1>
+
+            <div class="service app-grid lg-3 sm-1">
+                <div class="service__item">
+                    <i class="fa fa-diamond service-item__icon" aria-hidden="true"></i>
+                    <h1 class="service-item__caption">Best Quality</h1>
+                    <p class="service-item__description">Get the best quality app done</p>
+                </div>
+                <div class="service__item">
+                    <i class="fa fa-money service-item__icon" aria-hidden="true"></i>
+                    <h1 class="service-item__caption">Low cost</h1>
+                    <p class="service-item__description">Get the app in a reasonable cost</p>
+                </div>
+                <div class="service__item">
+                    <i class="fa fa-life-ring service-item__icon" aria-hidden="true"></i>
+                    <h1 class="service-item__caption">Support</h1>
+                    <p class="service-item__description">Get All-time support for yout app</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="app-section primary-bg work-section" id="works">
+            <h1 class="heading">Some of our works</h1>
+
+            <div class="work-section__works app-grid lg-4 md-2 sm-2">
+                <div class="works__item" style="background-image: url('images/thumbnails/1.jpg');"></div>
+                <div class="works__item" style="background-image: url('images/thumbnails/2.jpg');"></div>
+                <div class="works__item" style="background-image: url('images/thumbnails/3.jpg');"></div>
+                <div class="works__item" style="background-image: url('images/thumbnails/4.jpg');"></div>
+                <div class="works__item" style="background-image: url('images/thumbnails/5.jpg');"></div>
+                <div class="works__item" style="background-image: url('images/thumbnails/6.jpg');"></div>
+                <div class="works__item" style="background-image: url('images/thumbnails/7.jpg');"></div>
+                <div class="works__item" style="background-image: url('images/thumbnails/8.jpg');"></div>
+            </div>
+        </section>
+
+        <section class="app-section about-section" id="about">
+            <h1 class="heading">All about us</h1>
+
+            <div class="about-section__about app-grid lg-2 sm-1">
+                <div class="about__bio">
+                    <h1 class="heading bio__name">Prithvi</h1>
+                    <h2 class="heading bio__caption">Full-stack web developer</h2>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
